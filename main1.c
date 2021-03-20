@@ -45,6 +45,7 @@ void encrypt1(){
     }
     system("cls");
     printf("\nYOUR CRYPTIC PASSWORD IS:- %s",&crypt_pass);
+    getch();
 
 
 }
