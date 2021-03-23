@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
+
 static int  pi[80]={'1', '4', '1', '5', '9', '2', '6', '5', '3', '5', '8', '9', '7', '9', '3', '2', '3', '8','4', '6', '2', '6', '4', '3', '3', '8', '3', '2' ,'7', '9', '5', '0', '2', '8', '8', '4', '1', '9', '7', '1','6', '9', '3', '9', '9','3', '7', '5', '1', '0', '5', '8', '2', '0', '9', '7', '4', '9', '4', '4', '5','9', '2', '3', '0', '7', '8', '1' ,'6', '4', '0', '6', '2', '8', '6', '2', '0', '8', '9', '9'};
 /*void decrypt(){
 
@@ -25,10 +26,10 @@ void encrypt(){
                 encrypt1();
             }
             
-            if (x%2!=0)
-            {
+            //if (x%2!=0)
+            //{
                 //encrypt2();
-            }
+            //}
         
   
 
@@ -40,6 +41,7 @@ void encrypt1(){
     system("CLS");
     printf("\nENTER YOUR PASSWORD:-\t");
     scanf("%s",&temp_pass);
+     while ((getchar()) != '\n');
     for(int i=0;temp_pass[i]!='\0';i++){
         crypt_pass[i+1]=temp_pass[i]+pi[i];
     }
@@ -65,15 +67,16 @@ int main()
         printf("\n02.DECRYPT A PASSWORD");
         printf("\n03.EXIT");
         printf("\n\nENTER YOUR CHOICE(1-3):-\t");
+       while ((getchar()) != '\n');
         scanf("%d",&choice);
          switch(choice){
                 case 1:
                     encrypt();
                     break;
-                case 2:
+               // case 2:
                     //decrypt();
-                    break;
-                case 3:
+                   // break;
+                case 2:
                     exit(0);
                 default:
                     printf("\n\tWRONG CHOICE");
