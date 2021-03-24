@@ -3,18 +3,23 @@
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
+void decrypt1(char decrypt[80]){
+
+}
+void decrpyt2(char decrypt[80]){
+
+}
 void decrypt(){
     char temp_decypt[80];
-    char decrypt_pass[80];
     printf("\nENTER YOUR STRING TO BE DECYPTED:-\t");
     gets(&temp_decypt);
+    if(temp_decypt[0]=='A'){
+        decrypt1(&temp_decypt);
+    }
+    if(temp_decypt[0]=='B'){
+        decrpyt2(&temp_decypt);
+    }
     
-
-}
-void decrypt1(){
-
-}
-void decrpyt2(){
 
 }
 
