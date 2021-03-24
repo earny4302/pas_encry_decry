@@ -3,7 +3,12 @@
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
-/*void decrypt(){
+void decrypt(){
+    char temp_decypt[80];
+    char decrypt_pass[80];
+    printf("\nENTER YOUR STRING TO BE DECYPTED:-\t");
+    gets(&temp_decypt);
+    
 
 }
 void decrypt1(){
@@ -11,7 +16,7 @@ void decrypt1(){
 }
 void decrpyt2(){
 
-}*/
+}
 
 void encrypt(){ 
             time_t s, val = 1; 
@@ -33,10 +38,11 @@ void encrypt(){
 
 }
 void encrypt1(){
-    int  pi[80]={'1', '4', '1', '5', '9', '2', '6', '5', '3', '5', '8', '9', '7', '9', '3', '2', '3', '8', '4', '6', '2', '6', '4', '3', '3', '8', '3', '2' ,'7', '9', '5', '0', '2', '8', '8', '4', '1', '9', '7', '1', '6', '9', '3', '9', '9', '3', '7', '5', '1', '0', '5', '8', '2', '0', '9', '7', '4', '9', '4', '4', '5', '9', '2', '3', '0', '7', '8', '1' ,'6', '4', '0', '6', '2', '8', '6', '2', '0', '8', '9', '9'};
+    int  pi[80]={1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3, 2, 3, 8, 4, 6, 2, 6, 4, 3, 3, 8, 3, 2 ,7, 9, 5, 0, 2, 8, 8, 4, 1, 9, 7, 1, 6, 9, 3, 9, 9, 3, 7, 5, 1,0, 5, 8, 2, 0, 9, 7, 4, 9, 4, 4, 5, 9, 2, 3, 0, 7, 8, 1 ,6, 4, 0, 6, 2, 8, 6, 2, 0, 8, 9, 9};
     char temp_pass[80];
     char crypt_pass[81];
-    crypt_pass[0]=1;
+    crypt_pass[0]='A';
+    printf("\n%c",crypt_pass[0]);
     system("CLS");
     printf("\nENTER YOUR PASSWORD:-\t");
     scanf("%s",&temp_pass);
@@ -50,17 +56,18 @@ void encrypt1(){
         crypt_pass[i+1]=e;
         printf("\n%c",crypt_pass[i+1]);
     }
-    
+    printf("\n%c",crypt_pass[0]);
     printf("\nYOUR CRYPTIC PASSWORD IS:- %s",crypt_pass);
     getch();
 
 
 }
 void encrypt2(){
-    int gr[80]= {'6', '1', '8', '0', '3', '3', '9', '8', '8', '7', '4', '9', '8', '9', '4', '8', '4', '8', '2', '0', '4', '5', '8', '6', '8', '3', '4', '3', '6', '5', '6', '3', '8', '1', '1', '7', '7', '2', '0', '3', '0', '9', '1', '7', '9', '8', '0', '5', '7', '6', '2', '8', '6', '2', '1', '3', '5', '4', '4', '8', '6', '2', '2', '7', '0', '5', '2', '6', '0', '4', '6', '2', '8', '1', '8', '9', '0', '2', '4', '4'};
+    int gr[80]= { 6, 1, 8, 0, 3, 3, 9, 8, 8, 7, 4, 9, 8, 9, 4, 8, 4, 8, 2, 0, 4, 5, 8, 6, 8, 3, 4, 3, 6, 5, 6, 3, 8, 1, 1, 7, 7, 2, 0, 3, 0, 9, 1, 7, 9, 8, 0, 5, 7, 6, 2, 8, 6, 2, 1, 3, 5, 4, 4, 8, 6, 2, 2, 7, 0, 5, 2, 6, 0, 4, 6, 2, 8, 1, 8, 9, 0, 2, 4, 4};
     char temp_pass[80];
     char crypt_pass[81];
-    crypt_pass[0]=2;
+    crypt_pass[0]='B';
+    printf("\n%c",crypt_pass[0]);
     system("CLS");
     printf("\nENTER YOUR PASSWORD:-\t");
     scanf("%s",&temp_pass);
@@ -74,6 +81,7 @@ void encrypt2(){
         crypt_pass[i+1]=e;
         printf("\n%c",crypt_pass[i+1]);
     }
+    printf("\n%c",crypt_pass[0]);
     
     printf("\nYOUR CRYPTIC PASSWORD IS:- %s",crypt_pass);
     getch();
