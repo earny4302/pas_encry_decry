@@ -18,16 +18,10 @@ void encrypt1()
     for(int i=0;temp_pass[i]!='\0';i++)
     {
         int d=temp_pass[i];
-        printf("\n%d",d);
-        
         int f=pi[i];
-        printf("\n%d",f);
-        
         int e=d+f;
-        printf("\n%d",e);
-        
         crypt_pass[i+1]=e;
-        printf("\n%c",crypt_pass[i+1]);
+        
     }
     
     printf("\nYOUR CRYPTIC PASSWORD IS:- %s",crypt_pass);
@@ -50,17 +44,11 @@ void encrypt2()
     
     for(int i=0;temp_pass[i]!='\0';i++)
     {
-        int d=temp_pass[i];
-        printf("\n%d",d);
-        
-        int f=gr[i];
-        printf("%d",f);
-        
+        int d=temp_pass[i];      
+        int f=gr[i];       
         int e=d+f;
-        printf("\n%d",e);
-        
         crypt_pass[i+1]=e;
-        printf("\n%c",crypt_pass[i+1]);
+        
     }    
     printf("\nYOUR CRYPTIC PASSWORD IS:- %s",crypt_pass);
     getch();
@@ -74,15 +62,11 @@ void decrypt1(char temp_encrypt_pass[80]){
     for(int i=0;i<x;i++){
         
             int d=temp_encrypt_pass[i+1];
-            printf("\n%d",d);
             int f=pi[i];
-            printf("\n%d",f);
             int e=d-f;
-            printf("\n%d",e);
-            decrypt_pass[i]=e;
-            printf("\n%c",decrypt_pass[i]);
-    
+            decrypt_pass[i]=e;   
     }
+    decrypt_pass[x-1]='\0';
     printf("\nYOUR DECRYPTIC PASSWORD IS:- %s",decrypt_pass);
     getch();
 
@@ -94,16 +78,11 @@ void decrpyt2(char temp_encrypt_pass[80]){
     for(int i=0;i<x;i++){
             
             int d=temp_encrypt_pass[i+1];
-            printf("\n%d",d);
             int f=gr[i];
-            printf("\n%d",f);
             int e=d-f;
-            printf("\n%d",e);
-            decrypt_pass[i]=e;
-            printf("\n%c",decrypt_pass[i]);
-
-        
+            decrypt_pass[i]=e;        
     }
+    decrypt_pass[x-1]='\0';
     
     printf("\nYOUR CRYPTIC PASSWORD IS:- %s",decrypt_pass);
     getch();
@@ -151,7 +130,7 @@ int main()
     int choice;
     do{
         system("CLS");
-        printf("\nHOW CAN WER HELP YOU:-");
+        printf("\nHOW CAN WE HELP YOU:-");
         printf("\n01.ENCRYPT A PASSWORD");
         printf("\n02.DECRYPT A PASSWORD");
         printf("\n03.EXIT");
