@@ -148,7 +148,7 @@ int main()
                     printf("\n\tWRONG CHOICE");
             }
 
-    }while(choice>3);
+    }while(choice!=3);
 
            
     
