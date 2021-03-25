@@ -3,10 +3,41 @@
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
-void decrypt1(char decrypt[80]){
+void decrypt1(char temp_encrypt_pass[80]){
+    int  pi[80]={1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3, 2, 3, 8, 4, 6, 2, 6, 4, 3, 3, 8, 3, 2 ,7, 9, 5, 0, 2, 8, 8, 4, 1, 9, 7, 1, 6, 9, 3, 9, 9, 3, 7, 5, 1,0, 5, 8, 2, 0, 9, 7, 4, 9, 4, 4, 5, 9, 2, 3, 0, 7, 8, 1 ,6, 4, 0, 6, 2, 8, 6, 2, 0, 8, 9, 9};
+    char decrypt_pass[80];
+    for(int i=0;temp_encrypt_pass[i]!='\0';i++){
+        int d=temp_encrypt_pass[i];
+        printf("\n%d",d);
+        int f=pi[i];
+        printf("\n%d",f);
+        int e=d-f;
+        printf("\n%d",e);
+        decrypt_pass[i+1]=e;
+        printf("\n%c",decrypt_pass[i+1]);
+    }
+    printf("\nYOUR DECRYPTIC PASSWORD IS:- %s",decrypt_pass);
+    getch();
 
 }
-void decrpyt2(char decrypt[80]){
+void decrpyt2(char temp_encrypt_pass[80]){
+    int gr[80]= { 6, 1, 8, 0, 3, 3, 9, 8, 8, 7, 4, 9, 8, 9, 4, 8, 4, 8, 2, 0, 4, 5, 8, 6, 8, 3, 4, 3, 6, 5, 6, 3, 8, 1, 1, 7, 7, 2, 0, 3, 0, 9, 1, 7, 9, 8, 0, 5, 7, 6, 2, 8, 6, 2, 1, 3, 5, 4, 4, 8, 6, 2, 2, 7, 0, 5, 2, 6, 0, 4, 6, 2, 8, 1, 8, 9, 0, 2, 4, 4};
+    char decrypt_pass[80];
+    for(int i=0;temp_encrypt_pass[i]!='\0';i++){
+        int d=temencrypt_p_pass[i];
+        printf("\n%d",d);
+        int f=gr[i];
+        printf("%d",f);
+        int e=d+f;
+        printf("\n%d",e);
+        crypt_pass[i+1]=e;
+        printf("\n%c",crypt_pass[i+1]);
+    }
+    printf("\n%c",crypt_pass[0]);
+    
+    printf("\nYOUR CRYPTIC PASSWORD IS:- %s",crypt_pass);
+    getch();
+
 
 }
 void decrypt(){
