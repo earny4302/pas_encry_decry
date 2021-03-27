@@ -19,14 +19,16 @@ void encrypt1()
     printf("\n----------------------------------------------------------------------------------------------------------------------");
     printf("\n\tENTER YOUR PASSWORD:-\t");
     scanf("%s", &temp_pass);
-
+    int j=0;
     for (int i = 0; temp_pass[i] != '\0'; i++)
     {
         int d = temp_pass[i];
         int f = pi[i];
         int e = d + f;
         crypt_pass[i + 1] = e;
+        j=i+1;
     }
+    crypt_pass[j+1]='\0';
 
     printf("\n\tYOUR CRYPTIC PASSWORD IS:- %s", crypt_pass);
     getch();
@@ -48,15 +50,16 @@ void encrypt2()
     printf("\n----------------------------------------------------------------------------------------------------------------------");
     printf("\n\tENTER YOUR PASSWORD:-\t");
     scanf("%s", &temp_pass);
-
+    int j;
     for (int i = 0; temp_pass[i] != '\0'; i++)
     {
         int d = temp_pass[i];
         int f = gr[i];
         int e = d + f;
         crypt_pass[i + 1] = e;
+        j=i+1;
     }
-    
+    crypt_pass[j+1]='\0';
     printf("\n\tYOUR CRYPTIC PASSWORD IS:- %s", crypt_pass);
     getch();
 }
