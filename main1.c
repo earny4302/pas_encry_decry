@@ -144,7 +144,6 @@ void encrypt()
     {
         encrypt1();
     }
-
     if (x % 2 != 0)
     {
         encrypt2();
